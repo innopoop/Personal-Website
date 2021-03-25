@@ -1,0 +1,8 @@
+export const COLORS = {
+	SEPIA_BLACK: "#2E0303",
+	SANDY_BEACH: "#FFF0C8",
+	DAWN_PINK: "#F5EAEA",
+	GIMBLET: "#BBA66E",
+};
+
+export const DEFAULT = "DEFAULT";
