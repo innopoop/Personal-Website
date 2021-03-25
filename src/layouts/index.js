@@ -16,7 +16,7 @@ const Page = ({ children, props, location }) => {
 		console.log(window.location.pathname);
 		if (typeof window !== "undefined" && window.location.pathname !== "/")
 			setLanding(false);
-	}, [window, window.location.href]);
+	}, []);
 
 	console.log(landing);
 	return (
