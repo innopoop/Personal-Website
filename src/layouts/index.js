@@ -6,10 +6,9 @@ import "@fontsource/reenie-beanie";
 import "@fontsource/sanchez";
 import "./index.css";
 
-import Picture from "../../public/static/Menu.svg";
 import SlidingMenu from "../components/SlidingMenu";
 
-const Page = ({ children, props, location }) => {
+const Page = ({ children, props }) => {
 	const [menuOpen, setMenuOpen] = useState(false);
 	const [landing, setLanding] = useState(true);
 	useEffect(() => {
@@ -27,7 +26,7 @@ const Page = ({ children, props, location }) => {
 				<>
 					<SlidingMenu open={menuOpen} />
 					<IconButton
-						src={Picture}
+						src="static/Menu.svg"
 						onClick={() => {
 							setMenuOpen(!menuOpen);
 						}}
