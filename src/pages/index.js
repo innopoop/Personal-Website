@@ -6,13 +6,11 @@ import styled from "styled-components";
 import Page from "../layouts/index";
 // markup
 const IndexPage = () => {
-	const small = window.matchMedia("(min-width: 0px) and (max-width: 700px)");
-	const medium = window.matchMedia(
+	const small = window !== "undefined" ? window.matchMedia("(min-width: 0px) and (max-width: 700px)") : false;
+	const medium = window !== "undefined" ? window.matchMedia(
 		"(min-width: 700px) and (max-width: 1024px)"
 	);
-	const large = window.matchMedia("(min-width: 1024px)");
-	console.log(small.matches, medium.matches, large.matches);
-	console.log(Column, Row, Spacer);
+	const large = window !== "undefined" ? window.matchMedia("(min-width: 1024px)" : "");
 	return (
 		<Page>
 			<ContentContainer>
