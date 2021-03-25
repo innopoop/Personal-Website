@@ -22,7 +22,6 @@ export const Text = styled("div")`
 				return `
 					color: ${COLORS.DAWN_PINK};
 					font-family: "Reenie Beanie", cursive;
-					font-weight: bold;
 					@media screen and (min-width: 1024px) {
 						font-size: 60px;
 					}

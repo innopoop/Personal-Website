@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Text, Row, Column, Spacer } from "../components/defaults";
+import { Text, Row, Spacer } from "../components/defaults";
 import { COLORS } from "../lib/constants";
 import styled from "styled-components";
 import Page from "../layouts/index";

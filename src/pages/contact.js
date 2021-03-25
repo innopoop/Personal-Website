@@ -1,13 +1,14 @@
 import React from "react";
 
 import { Text, Row, Column, Spacer } from "../components/defaults";
+import { COLORS } from "../lib/constants";
 import styled from "styled-components";
 import Page from "../layouts/index";
 
 const Socials = {
 	email: "ashley.t.zhu@gmail.com",
 	phone: "(925) 660 - 2551",
-	instagram: "@kissmesone",
+	instagram: "https://www.instagram.com/kissmesone/",
 	facebook: "https://facebook.com/catpls",
 	discord: "catpls#8790",
 };
@@ -26,10 +27,18 @@ const Contact = () => {
 					{Object.keys(Socials).map((platform) => {
 						console.log(platform, Socials[platform]);
 						return (
-							<Row>
+							<Row align="center" justify="center">
 								<Text type="subtitle">{platform}:</Text>
 								<Spacer x={10} />
-								<Text>{Socials[platform]}</Text>
+								<Text type="secondary-subtitle">
+									{Socials[platform].includes("https") ? (
+										<LinkStyles href={Socials[platform]}>
+											{Socials[platform]}
+										</LinkStyles>
+									) : (
+										Socials[platform]
+									)}
+								</Text>
 							</Row>
 						);
 					})}
@@ -52,5 +61,20 @@ const ContentContainer = styled("div")`
 	}
 	@media screen and (min-width: 0px) and (max-width: 700px) {
 		margin: 1vh;
+	}
+`;
+
+const LinkStyles = styled("a")`
+	&:link {
+		color: ${COLORS.SANDY_BEACH};
+	}
+	&:visited {
+		color: ${COLORS.SANDY_BEACH};
+	}
+	&:hover {
+		color: ${COLORS.GIMBLET};
+	}
+	&:active {
+		color: ${COLORS.GIMBLET};
 	}
 `;

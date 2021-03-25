@@ -6,11 +6,18 @@ import styled from "styled-components";
 import Page from "../layouts/index";
 // markup
 const IndexPage = () => {
-	const small = window !== "undefined" ? window.matchMedia("(min-width: 0px) and (max-width: 700px)") : false;
-	const medium = window !== "undefined" ? window.matchMedia(
-		"(min-width: 700px) and (max-width: 1024px)"
-	);
-	const large = window !== "undefined" ? window.matchMedia("(min-width: 1024px)" : "");
+	const small =
+		typeof window !== "undefined"
+			? window.matchMedia("(min-width: 0px) and (max-width: 700px)")
+			: false;
+	// const medium =
+	// 	window !== "undefined"
+	// 		? window.matchMedia("(min-width: 700px) and (max-width: 1024px)")
+	// 		: false;
+	// const large =
+	// 	window !== "undefined"
+	// 		? window.matchMedia("(min-width: 1024px)")
+	// 		: false;
 	return (
 		<Page>
 			<ContentContainer>
@@ -145,7 +152,9 @@ const Button = styled("div")`
 	font-family: "Sanchez";
 	font-size: 48px;
 	color: ${COLORS.SANDY_BEACH};
-	filter: drop-shadow(3px 3px 1px ${COLORS.GIMBLET});
+	&:hover {
+		filter: drop-shadow(3px 3px 1px ${COLORS.GIMBLET});
+	}
 	cursor: pointer;
 `;
 

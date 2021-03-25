@@ -3,6 +3,7 @@ export const COLORS = {
 	SANDY_BEACH: "#FFF0C8",
 	DAWN_PINK: "#F5EAEA",
 	GIMBLET: "#BBA66E",
+	FERRA: "#724B4B",
 };
 
 export const DEFAULT = "DEFAULT";
