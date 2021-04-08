@@ -1,27 +1,31 @@
 {
-  "name": "where-s-ashley",
-  "version": "1.0.0",
-  "private": true,
-  "description": "Where's Ashley?",
-  "author": "Ashley",
-  "keywords": [
-    "gatsby"
-  ],
-  "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean"
-  },
-  "dependencies": {
-    "@fontsource/reenie-beanie": "^4.2.2",
-    "@fontsource/sanchez": "^4.2.2",
-    "gatsby": "^3.0.1",
-    "gatsby-plugin-manifest": "^3.1.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-helmet": "^6.1.0",
-    "styled-components": "^5.2.1"
-  }
+	"name": "where-s-ashley",
+	"version": "1.0.0",
+	"private": true,
+	"description": "Where's Ashley?",
+	"author": "Ashley",
+	"keywords": [
+		"gatsby"
+	],
+	"scripts": {
+		"develop": "gatsby develop",
+		"start": "gatsby develop",
+		"build": "gatsby build",
+		"serve": "gatsby serve",
+		"clean": "gatsby clean",
+		"deploy": "gatsby build --prefix-paths && gh-pages -d public"
+	},
+	"dependencies": {
+		"@fontsource/reenie-beanie": "^4.2.2",
+		"@fontsource/sanchez": "^4.2.2",
+		"gatsby": "^3.0.1",
+		"gatsby-plugin-manifest": "^3.1.0",
+		"gatsby-plugin-styled-components": "^4.2.0",
+		"react": "^17.0.1",
+		"react-dom": "^17.0.1",
+		"styled-components": "^5.2.1"
+	},
+	"devDependencies": {
+		"gh-pages": "^3.1.0"
+	}
 }

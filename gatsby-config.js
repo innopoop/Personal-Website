@@ -1,4 +1,5 @@
 module.exports = {
+	pathPrefix: "/Personal-Website",
 	siteMetadata: {
 		siteName: "Ashley",
 		exampleUrl: "https://www.ashley-zee.com",
@@ -15,5 +16,6 @@ module.exports = {
 				icon: `src/images/Logo.svg`,
 			},
 		},
+		`gatsby-plugin-styled-components`,
 	],
 };
